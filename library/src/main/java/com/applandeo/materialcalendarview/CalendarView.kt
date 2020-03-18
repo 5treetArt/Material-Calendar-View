@@ -178,6 +178,11 @@ class CalendarView @JvmOverloads constructor(
         forwardButton.setOnClickListener {
             calendarViewPager.currentItem = calendarViewPager.currentItem + 1
         }
+
+        currentDateLabel.setOnClickListener {
+            //TODO https://github.com/philliphsu/BottomSheetPickers
+            LayoutInflater.from(context).inflate(R.layout.month_view, this)
+        }
     }
 
     private fun initCalendar() {
